@@ -104,6 +104,15 @@ export class NgbModalRef {
 	}
 
 	/**
+	 * The componentRef of a component used for the modal content.
+	 *
+	 * When a `TemplateRef` is used as the content or when the modal is closed, will return `undefined`.
+	 */
+	get componentRef(): ComponentRef {
+		return this._contentRef?.componentRef;
+	}
+
+	/**
 	 * The promise that is resolved when the modal is closed and rejected when the modal is dismissed.
 	 */
 	result: Promise<any>;
